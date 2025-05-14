@@ -8,13 +8,16 @@ import {
 
 } from "@expo-google-fonts/roboto";
 
+/* aqui sao algumas rotas usadas para poder usar os compontentes */
+
+
 import { GluestackUIProvider, Text, Center } from '@gluestack-ui/themed'
 
 import { config } from "./config/gluestack-ui.config";
 
 import { Loading } from '@components/Loading';
 
-
+import { Signin } from '@screens/Signin';
 
 
 
@@ -34,21 +37,11 @@ export default function App() {
       />
 
 
-      {!fontsLoaded ?
-
-        (<Center flex ={1} bg="$gray700">
-
-          <Text>Home</Text>
-
-        </Center>
-
-
-        ) : (
-        
+      {fontsLoaded ?
+        <Signin />
+        :
         <Loading />
-        
-        )}
-
+      }
     </GluestackUIProvider>
   )
 }
