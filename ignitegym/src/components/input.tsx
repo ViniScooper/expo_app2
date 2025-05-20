@@ -16,6 +16,9 @@ export function Input({ ...rest }: Props) {
             px="$4"
             borderWidth="$0"
             borderRadius="$md"
+            $focus ={{
+                borderWidth: "$0",
+            }}
             
             >
 

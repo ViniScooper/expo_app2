@@ -12,11 +12,19 @@ import backgrtoundImg from "@assets/background.png";
 
 /* agora conseguimos passar a logo */
 
+
+
+
+
+
+
 import Logo from "@assets/logo.svg";
 
 
 
 /* tempos que importar os componentes  de input */
+
+
 
 import { Input } from "@components/input";
 
@@ -39,6 +47,8 @@ export function Signin() {
                 defaultSource={backgrtoundImg}
                 alt="Pesssoas treinando"
                 position="absolute"
+                
+
                 
 
                
