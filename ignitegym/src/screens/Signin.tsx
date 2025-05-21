@@ -1,4 +1,4 @@
-import { VStack ,Image, Center,Text,Heading} from "@gluestack-ui/themed";
+import { VStack, Image, Center, Text, Heading, ScrollView } from "@gluestack-ui/themed";
 
 /* o typescript nao tava entendendo o ".png" entao tive que criar um arquivo types para isso */
 
@@ -41,8 +41,12 @@ import { Button } from "@components/Button";
 
 
 export function Signin() {
-  
+
     return (
+
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
+
+
         <VStack flex={1} bg="$gray700">
 
             <Image
@@ -52,48 +56,67 @@ export function Signin() {
                 defaultSource={backgrtoundImg}
                 alt="Pesssoas treinando"
                 position="absolute"
-                
 
 
 
-               
-               
+
+
+
             />
 
-            <VStack flex = {1} px ="$10" pb="$16">
+            <VStack flex={1} px="$10" pb="$16">
 
 
-            <Center my="$24">
-                
-                <Logo />
-                
-                <Text color ="$gray100" fontSize="$sm">
+                <Center my="$24">
 
-                    treine sua mente e seu corpo
+                    <Logo />
 
+                    <Text color="$gray100" fontSize="$sm">
 
-                </Text>
-
-            </Center>
-
-            <Center gap= "$2">
-                <Heading color="$gray100" >
-                    Acesse sua conta
-                </Heading>
-
-                <Input  placeholder = "Email"  keyboardType="email-address"  autoCapitalize="none"/>
-                <Input  placeholder = "Senha" secureTextEntry/>
+                        treine sua mente e seu corpo
 
 
+                    </Text>
 
-                <Button title="Acessar" />
-               
+                </Center>
 
-             </Center>
+                <Center gap="$2">
+                    <Heading color="$gray100" >
+                        Acesse sua conta
+                    </Heading>
 
-             </VStack>
+                    <Input placeholder="Email" keyboardType="email-address" autoCapitalize="none" />
+                    <Input placeholder="Senha" secureTextEntry autoCapitalize="none" />
+
+                    {/* colocar o "isLoading" abaixo  para ficar carregando quando user fazer a requisicao ao banco */}
+
+                    <Button title="Acessar" />
+
+                    </Center>
+
+
+                    
+
+                    <Center flex={1} justifyContent="flex-end" mt="$4">
+
+                        <Text color="$gray100" fontSize="$sm" mb ="$3" fontFamily="body">Ainda nao tem acesso? </Text>
+
+
+                        <Button title="Criar conta" variant="outline" />
+
+                       
+
+
+                  
+
+                </Center>
+
+
+
+            </VStack>
 
 
         </VStack>
+        </ScrollView>
     )
 }

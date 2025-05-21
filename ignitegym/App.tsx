@@ -17,7 +17,7 @@ import { config } from "./config/gluestack-ui.config";
 
 import { Loading } from '@components/Loading';
 
-import { Signin } from '@screens/Signin';
+import { SignUp } from '@screens/SignUp';
 
 
 
@@ -38,7 +38,7 @@ export default function App() {
 
 
       {fontsLoaded ?
-        <Signin />
+        <SignUp />
         :
         <Loading />
       }
