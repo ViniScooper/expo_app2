@@ -29,6 +29,11 @@ import Logo from "@assets/logo.svg";
 import { Input } from "@components/input";
 
 
+/* importando o butao */
+
+import { Button } from "@components/Button";
+
+
 
 
 
@@ -49,7 +54,7 @@ export function Signin() {
                 position="absolute"
                 
 
-                
+
 
                
                
@@ -76,8 +81,14 @@ export function Signin() {
                     Acesse sua conta
                 </Heading>
 
-                <Input  placeholder = "Email"/>
-                <Input  placeholder = "Senha"/>
+                <Input  placeholder = "Email"  keyboardType="email-address"  autoCapitalize="none"/>
+                <Input  placeholder = "Senha" secureTextEntry/>
+
+
+
+                <Button title="Acessar" />
+               
+
              </Center>
 
              </VStack>
