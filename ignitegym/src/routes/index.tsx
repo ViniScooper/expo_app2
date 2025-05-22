@@ -31,7 +31,8 @@ export function Routes() {
     <NavigationContainer theme ={theme}>
       
 
-      <AppRoutes />
+      <AppRoutes /> 
+     {/*  <AuthRoutes/> */}
 
 
     </NavigationContainer>
