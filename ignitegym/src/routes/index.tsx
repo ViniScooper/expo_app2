@@ -7,6 +7,8 @@ import { gluestackUIConfig } from  "../../config/gluestack-ui.config";
 
 import { Box } from '@gluestack-ui/themed';
 
+import { AppRoutes } from './app.routes';
+
 
 
 export function Routes() {
@@ -24,8 +26,14 @@ export function Routes() {
     <Box flex ={1} bg="$gray700">
 
 
+{/* caso eu queira autenticação antes passo abaixo inves de AppRoutes passo <AuthRoutes /> */}
+
     <NavigationContainer theme ={theme}>
-      <AuthRoutes />
+      
+
+      <AppRoutes />
+
+
     </NavigationContainer>
 
 
