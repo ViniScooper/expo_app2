@@ -14,6 +14,9 @@ import backgrtoundImg from "@assets/background.png";
 
 
 
+import { useNavigation } from "@react-navigation/native";
+
+
 
 
 
@@ -42,12 +45,18 @@ import { Button } from "@components/Button";
 
 export function SignUp() {
 
+    const navigation = useNavigation();
+
+    function handelGoback() {
+        navigation.goBack();
+    }   
+
     return (
 
         <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
 
 
-            <VStack flex={1} bg="$gray700">
+            <VStack flex={1}>
 
                 <Image
                     w="$full"
@@ -102,7 +111,7 @@ export function SignUp() {
 
 
 
-                    <Button title="Voltar para login" variant="outline" mt="$12" />
+                    <Button title="Voltar para login" variant="outline" mt="$12" onPress={handelGoback}/>
 
 
 

@@ -13,6 +13,10 @@ import backgrtoundImg from "@assets/background.png";
 /* agora conseguimos passar a logo */
 
 
+import { useNavigation } from "@react-navigation/native";
+
+import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
+
 
 
 
@@ -32,6 +36,8 @@ import { Input } from "@components/input";
 /* importando o butao */
 
 import { Button } from "@components/Button";
+import { Routes } from "@routes/index";
+
 
 
 
@@ -41,13 +47,19 @@ import { Button } from "@components/Button";
 
 
 export function Signin() {
+    const navigation = useNavigation<AuthNavigatorRoutesProps>();
+
+
+    function handleNewAccount() {
+        navigation.navigate("SignUp");
+    }
 
     return (
 
         <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
 
 
-        <VStack flex={1} bg="$gray700">
+        <VStack flex={1} >
 
             <Image
                 w="$full"
@@ -102,7 +114,7 @@ export function Signin() {
                         <Text color="$gray100" fontSize="$sm" mb ="$3" fontFamily="body">Ainda nao tem acesso? </Text>
 
 
-                        <Button title="Criar conta" variant="outline" />
+                        <Button title="Criar conta" variant="outline" onPress={handleNewAccount} />
 
                        
 

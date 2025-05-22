@@ -11,13 +11,15 @@ import {
 /* aqui sao algumas rotas usadas para poder usar os compontentes */
 
 
-import { GluestackUIProvider, Text, Center } from '@gluestack-ui/themed'
+import { GluestackUIProvider } from '@gluestack-ui/themed'
 
 import { config } from "./config/gluestack-ui.config";
 
+import {Routes } from "./src/routes";
+
 import { Loading } from '@components/Loading';
 
-import { SignUp } from '@screens/SignUp';
+
 
 
 
@@ -38,7 +40,7 @@ export default function App() {
 
 
       {fontsLoaded ?
-        <SignUp />
+        <Routes />
         :
         <Loading />
       }
